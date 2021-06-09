@@ -1,16 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar'; //Barra de estado
+import React from 'react'; //React para JSX
+import Home from "./src/components/screens/Home"; //ruta relativa
+//import { StyleSheet, Text, View } from 'react-native'; //React native
+// Importacion de modulos
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+export default function App() { //lo hace accesible desde otros archivos
+  return ( //Todas las funciones que van a renderizar llevan un return, solo lleva un PADRE
+   /*  {/* <View style={styles.container}>
+      <Text>Pokedex con React Native y PokeAPI</Text>
       <StatusBar style="auto" />
-    </View>
+    </View> }*/
+    <>
+    <Home/>
+    <StatusBar style="auto"/>
+    </>
   );
 }
-
+/* 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -18,4 +24,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+}); */
